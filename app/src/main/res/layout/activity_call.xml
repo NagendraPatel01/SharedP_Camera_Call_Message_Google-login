@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CameraActivity"
+    tools:context=".CallActivity"
     android:orientation="vertical"
     android:background="#01051B">
 
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:hint="Enter number"
+        android:textColor="#000"
+        android:textSize="20dp">
+
+    </EditText>
+
     <Button
         android:id="@+id/btn"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/button"
-        android:text="Open camera">
+        android:layout_marginTop="20dp"
+        android:text="Call"
+        android:background="@drawable/button">
 
     </Button>
 
-
-    <ImageView
-        android:layout_margin="20dp"
-        android:id="@+id/img"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ImageView>
 </LinearLayout>

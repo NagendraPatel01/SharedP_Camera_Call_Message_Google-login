@@ -42,7 +42,7 @@ public class ShowActivity extends AppCompatActivity {
                 finish();
 
 
-                Toast.makeText(ShowActivity.this, "logout succesfull", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ShowActivity.this, "Clear Succesfully", Toast.LENGTH_SHORT).show();
             }
 
         });
