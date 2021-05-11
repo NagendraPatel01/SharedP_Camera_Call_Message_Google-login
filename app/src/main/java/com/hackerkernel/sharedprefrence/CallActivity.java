@@ -17,7 +17,7 @@ import android.widget.Toast;
 public class CallActivity extends AppCompatActivity {
 
     EditText edit;
-    Button btn;
+    Button btn,btn1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,17 @@ public class CallActivity extends AppCompatActivity {
 
         edit=findViewById(R.id.edit);
         btn=findViewById(R.id.btn);
+        btn1=findViewById(R.id.btn1);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(CallActivity.this,CameraActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
