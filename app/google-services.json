@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "394450633173",
+    "project_id": "sharedpref-7b090",
+    "storage_bucket": "sharedpref-7b090.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394450633173:android:47c6a3e1712d63cdce7d5c",
+        "android_client_info": {
+          "package_name": "com.hackerkernel.sharedprefrence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394450633173-oamquo7caklesamb5ah6o84du033j5hd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackerkernel.sharedprefrence",
+            "certificate_hash": "01f4db33aea1864034c6b1d0dc4cd1b165cd962b"
+          }
+        },
+        {
+          "client_id": "394450633173-hf9chfkc81618fasmeh26d187k8tns89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0iTOpuvnoUQEGVvEHODDbsL3Z-29OKJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394450633173-hf9chfkc81618fasmeh26d187k8tns89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
