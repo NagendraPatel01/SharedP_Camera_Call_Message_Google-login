@@ -35,6 +35,7 @@
 
         <EditText
             android:layout_marginLeft="20dp"
+            android:inputType="number"
             android:layout_gravity="center_vertical"
             android:background="#fff"
             android:layout_width="match_parent"

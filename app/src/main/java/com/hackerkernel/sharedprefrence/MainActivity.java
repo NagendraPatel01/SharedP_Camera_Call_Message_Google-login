@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,26 +31,52 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences=getSharedPreferences("data", Context.MODE_PRIVATE);
 
-        if(sharedPreferences != null){
+
+        String channel=sharedPreferences.getString("name","");
+        Log.d("drftytrewrt", "fghgfdfg: "+channel);
+        String channel1=sharedPreferences.getString("phone no","");
+        Log.d("dfghjhgfghj", "xcvbdfgbfg: "+channel1);
+
+/*
+        if(channel != null){
 
             Intent intent=new Intent(MainActivity.this,ShowActivity.class);
             startActivity(intent);
 
-        }
+
+        }*/
+
+
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.putString("name",edit1.getText().toString());
-                editor.putString("phone no",edit2.getText().toString());
-                editor.commit();
+               // edit2.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
 
-                Toast.makeText(MainActivity.this, "submit succesfully", Toast.LENGTH_SHORT).show();
+                if (edit1.getText().toString().length()==0) {
+                    Toast.makeText(MainActivity.this, "please ener valid data", Toast.LENGTH_SHORT).show();
+                }else if (edit2.getText().toString().length()==0) {
+                    Toast.makeText(MainActivity.this, "please enter valid data", Toast.LENGTH_SHORT).show();
+                }else {
 
-                Intent intent=new Intent(MainActivity.this,ShowActivity.class);
-                startActivity(intent);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putString("name",edit1.getText().toString());
+                    editor.putString("phone no",edit2.getText().toString());
+                    editor.commit();
+
+
+                    Toast.makeText(MainActivity.this, "submit succesfully", Toast.LENGTH_SHORT).show();
+
+
+                    Intent intent=new Intent(MainActivity.this,ShowActivity.class);
+                    startActivity(intent);
+
+                    finish();
+                }
+
+
             }
         });
     }

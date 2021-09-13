@@ -13,11 +13,6 @@
         <activity android:name=".loginActivity" />
         <activity android:name=".SplashActivity" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MessageActivity">
 
@@ -25,7 +20,16 @@
         <activity android:name=".CallActivity" />
         <activity android:name=".CameraActivity" />
         <activity android:name=".ShowActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />

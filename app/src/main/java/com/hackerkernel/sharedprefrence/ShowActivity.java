@@ -43,6 +43,8 @@ public class ShowActivity extends AppCompatActivity {
 
 
                 Toast.makeText(ShowActivity.this, "Clear Succesfully", Toast.LENGTH_SHORT).show();
+
+                finish();
             }
 
         });
