@@ -15,7 +15,7 @@ public class CameraActivity extends AppCompatActivity {
 
     Button btn;
     ImageView img;
-    private static final int Camera_Request=1888;
+  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +23,24 @@ public class CameraActivity extends AppCompatActivity {
 
         btn=findViewById(R.id.btn);
         img=findViewById(R.id.img);
+        
+        
+         if (ContextCompat.checkSelfPermission(MainActivity.this
+        , Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+
+            ActivityCompat.requestPermissions(MainActivity.this,new String[]
+                    {
+                            Manifest.permission.CAMERA
+                    },100);
+        }
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent,Camera_Request);
+                startActivityForResult(intent,100);
             }
         });
     }
@@ -38,7 +49,7 @@ public class CameraActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode==Camera_Request){
+        if (requestCode==100){
 
             Bitmap photo=(Bitmap)data.getExtras().get("data");
             img.setImageBitmap(photo);
